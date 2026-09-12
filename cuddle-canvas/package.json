@@ -1,0 +1,22 @@
+{
+  "name": "cuddle-canvas",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "tsc --noEmit",
+    "start": "tsx server.ts"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.4",
+    "@types/node": "^24.5.2",
+    "@types/ws": "^8.18.1"
+  }
+}

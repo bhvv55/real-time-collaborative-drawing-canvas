@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cuddle Canvas ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="blob blob-a"></div><div class="blob blob-b"></div>
+  <header>
+    <div class="brand">
+      <div class="logo">🧸</div>
+      <div><strong>Cuddle Canvas</strong><span>tiny drawings, together</span></div>
+    </div>
+    <div class="room-pill"><span class="dot"></span><span id="roomLabel">cuddle-room</span><button id="copyRoom">copy</button></div>
+  </header>
+
+  <main>
+    <section class="topbar">
+      <div>
+        <h1>Let's make something <em>cute.</em> ✨</h1>
+        <p>Draw together in real time. No perfection required.</p>
+      </div>
+      <div class="people" id="people"></div>
+    </section>
+
+    <section class="workspace">
+      <aside class="toolbar">
+        <button class="tool active" data-tool="pen" title="Pencil">✏️</button>
+        <button class="tool" data-tool="eraser" title="Eraser">🧼</button>
+        <div class="sep"></div>
+        <label class="swatch-label">ink</label>
+        <div class="swatches" id="swatches"></div>
+        <div class="sep"></div>
+        <label class="range-label">size <b id="sizeValue">6</b></label>
+        <input id="size" type="range" min="2" max="28" value="6">
+        <div class="sep"></div>
+        <button id="undo" class="soft">↶</button>
+        <button id="clear" class="soft">🗑️</button>
+      </aside>
+
+      <div class="canvas-wrap">
+        <canvas id="canvas"></canvas>
+        <div class="hint" id="hint">draw a little something ♡</div>
+      </div>
+    </section>
+
+    <section class="bottom">
+      <div class="sticker-tray">
+        <span>stickers</span>
+        <button data-sticker="🌸">🌸</button><button data-sticker="⭐">⭐</button>
+        <button data-sticker="🐰">🐰</button><button data-sticker="🍓">🍓</button>
+        <button data-sticker="☁️">☁️</button><button data-sticker="💗">💗</button>
+      </div>
+      <button id="export" class="export">save my masterpiece ↗</button>
+    </section>
+  </main>
+
+  <div class="name-modal" id="modal">
+    <div class="modal-card">
+      <div class="bear">🐻</div>
+      <h2>Welcome, little artist!</h2>
+      <p>Pick a name for your tiny avatar.</p>
+      <input id="name" maxlength="18" value="Puff" />
+      <div class="emoji-row" id="emojiRow">
+        <button>🐻</button><button>🐰</button><button>🐱</button><button>🦊</button><button>🐸</button>
+      </div>
+      <button id="enter" class="enter">enter the canvas ✨</button>
+    </div>
+  </div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
